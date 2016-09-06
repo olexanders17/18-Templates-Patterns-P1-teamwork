@@ -1,0 +1,20 @@
+{
+  "name": "18-Templates-Patterns-teamwork-",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "olexanders17 <olexanders17@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/olexanders17/18-Templates-Patterns-teamwork-",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "18-Templates-Patterns-teamwork-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test2": "echo \"Error: no test specified\" && exit 1",
+    "eslint-test": "node_modules/.bin/eslint src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olexanders17/18-Templates-Patterns-teamwork-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "homepage": "https://github.com/olexanders17/18-Templates-Patterns-teamwork-#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^5.0.3"
+  },
+  "dependencies": {}
+}
