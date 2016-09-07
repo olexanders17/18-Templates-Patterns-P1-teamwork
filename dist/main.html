@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>VK</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+	</head>
+
+	<body>
+		
+		<div class="container-fluid">
+			<div class="row header">
+				<div class="logo">
+					<a href="#">LOGO</a>
+				</div>
+				<div class="search">
+					<input type="search" name="q">
+					<input type="submit" value="">
+				</div>
+				<div class="switchLangBtn">
+					<span>Switch LANGUAGE</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-8 mainSection">
+					
+				</div>
+				
+				<div class="col-md-4 sidebar">
+					
+					<div class="col-md-6 logMenu">
+						<form action="do" method="get" >
+							<div class="register-row">
+								<label for="name">
+								<input type="text" name="nameLogin" id="name" placeholder="Телефон або email" required autofocus>
+								</label>
+							</div>
+							<div class="register-row">
+								<label for="pass">Password
+								<input type="password" name="pass" id="pass" placeholder="Пароль" required>
+								</label>
+							</div>
+							<div>
+								<input type="submit" value="Увійти" name="signup"  >
+								<a href="#">Забули пароль</a>
+							</div>
+							
+						</form>
+					</div>
+
+					<div class="col-md-6 regMenu">
+						<form action="do" method="get" >
+							<div class="register-row">
+								<label for="nameRegister">
+								<input type="text" name="name" id="nameRegister" placeholder="Ваше ім'я" required >
+								</label>
+							</div>
+							<div class="register-row">
+								<label for="surname">
+								<input type="text" name="name" id="surname" placeholder="Ваше прізвище" required >
+								</label>
+							</div>
+							<div class="BirthDate">
+								<div class="form-row col-md-3">
+									<select class="daysList"></select>
+								</div>
+								<div class="form-row col-md-5">
+									<select class="monthList"><option>November</option></select>
+								</div>
+								<div class="form-row col-md-2">
+									<select class="yearsList"></select>
+								</div>
+							</div>
+							<button class="col-md-12">Зареєструватись</button>
+						</form>
+						<div class="fbLink col-md-12">
+							<a href="#">Увійти через Facebook</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="footer">
+					
+					<div class="copyright col-md-2" style="background:red;">
+						<a href="#">Вконтакті</a>
+						<small>&copy; 2016</small>
+					</div>
+
+					<div class="aboutSiteBtns col-md-6" style="background:pink">
+						<ul class="verticalBtns">
+							<li>про компанію</li>
+							<li>правила</li>
+							<li>реклама</li>
+							<li>розробникам</li>
+						</ul>
+					</div>
+
+					<div class="footerLangs col-md-4" style="background:orange">
+						<ul class="verticalBtns">
+							<li>Мова:</li>
+							<li>English</li>
+							<li>Русский</li>
+							<li>Українська</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			var $select = $(".daysList");
+				for (i=1;i<=31;i++){
+				$select.append($('<option></option>').val(i).html(i))
+				}
+			});
+
+			$(function(){
+			var $select = $(".yearsList");
+				for (i=2016;i>=1901;i--){
+				$select.append($('<option></option>').val(i).html(i))
+				}
+			});
+		</script>
+	</body>
+</html>
