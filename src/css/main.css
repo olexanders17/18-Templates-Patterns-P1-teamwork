@@ -1,0 +1,102 @@
+body{
+	background-color: #edeef0;
+}
+
+/*=============HEADER BLOCK ===============*/
+.header {
+	background-color: #507299;
+	height: 40px;
+}
+/*Logo sub-block*/
+.logo {
+	margin-left: 8%;
+	vertical-align: middle;
+}
+.logo a {
+	height: 40px;
+	color: white;
+}
+/*Search sub-block*/
+.search {
+	width: 200px;
+	border: 1px solid white;
+	min-height: 10px;
+	border-radius: 10px;
+	background: white;
+	margin-left: 25%;
+	margin-top: -15px;
+}
+.search input[type="search"] {
+	border: none; 
+	outline: none; 
+	-webkit-appearance: none; 
+	width: 150px; 
+	vertical-align: middle;
+	border-radius: 10px;
+}
+.search input[type="submit"] {
+	width:20px; 
+	height: 20px; 
+	border: none;
+	background: red;
+
+}
+
+/*Header switch language button */
+.switchLangBtn {
+	margin-left: 70%;
+	margin-top:-30px;
+	height: 20px;
+}
+
+/*=============MAIN BLOCK ===============*/
+.mainSection {
+	height: 900px;
+	background: yellow;
+}
+/*  can use!
+.container {
+	height: 100vh;
+}
+*/
+
+/*=============SIDEBAR BLOCK ( LOGIN & REGISTRATION )===============*/
+.sidebar {
+	background: #edeef0;
+	height: 900px;
+	display: flex;
+	flex-direction: column;
+}
+
+.logMenu, .regMenu {
+	width: 80%;
+	border: 1px solid #e3e4e8;
+	border-radius: 3px;
+
+}
+
+.logMenu {
+	background: #ffffff;
+	height: 150px;
+	width: 80%;
+	margin-top: 20px;
+
+}
+.regMenu {
+	background: #ffffff;
+	height: 300px;
+	width: 80%;
+	margin-top: 25px;
+}
+
+
+/*=============FOOTER BLOCK ===============*/
+
+/*verticalBtns sub-block*/
+.verticalBtns li {
+	display: inline;
+}
+
+.birthDate div select {
+	display: inline-block;
+}
