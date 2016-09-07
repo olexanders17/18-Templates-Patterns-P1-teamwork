@@ -3,24 +3,22 @@ var eslint = require('gulp-eslint');
 var jade = require('gulp-jade');
 
 
-gulp.task('copy',function () {
-   gulp.src("./src/lection.html")
-       .pipe(gulp.dest('./dist/'))
+gulp.task('copy', function () {
+    gulp.src("./src/**/*.*")
+        .pipe(gulp.dest('./dist/'));
 
 });
 
 
 gulp.task('eslint', function () {
-    return gulp.src(['src/**/*.js', ])
+    return gulp.src(['src/**/*.js',])
         .pipe(eslint())
         .pipe(eslint.format())
         .pipe(eslint.failAfterError());
 });
 
 
-
-
-gulp.task('jade', function() {
+gulp.task('jade', function () {
     var YOUR_LOCALS = {};
 
     gulp.src('./src/*.jade')
