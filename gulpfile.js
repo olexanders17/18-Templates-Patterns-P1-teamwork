@@ -5,7 +5,7 @@ var ghPages = require('gulp-gh-pages');
 
 
 gulp.task('copy', function () {
-    gulp.src("./src/**/*.*")
+    gulp.src(["./src/**/*.*", "!./src/**/*.pug"])
         .pipe(gulp.dest('./dist/'));
 
 });
