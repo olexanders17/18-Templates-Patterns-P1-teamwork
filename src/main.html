@@ -7,91 +7,130 @@
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<title>VK</title>
 
-		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 	</head>
 
 	<body>
 		
-		<div class="container-fluid">
-			<div class="row header">
-				<div class="logo col-md-2">
-					<a href="#" class="logoImg">Logo</a>
-				</div>
-				<div class="search">
-					<input type="submit" value="">
-					<input type="search" name="q" value="" placeholder="Пошук">
-					
-				</div>
-				<div class="switchLangBtn col-md-3">
-					<span>Switch to English</span>
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="logo col-md-2">
+						<a href="#"></a>
+					</div>
+					<div class="col-md-7">
+					<div class="search">
+						<input type="submit" value="">
+						<input type="search" name="q" value="" placeholder="Пошук">
+					</div>
+					</div>
+					<div class="col-md-3">
+						<span class="switchLangBtn">Switch to English</span>
+					</div>
 				</div>
 			</div>
-		</div>
+		</header>
 
 		<div class="container">
 			<div class="row">
-
 				<div class="col-md-8 mainSection">
 					<div></div>
 				</div>
 				
 				<div class="col-md-4 sidebar">
 					
-					<div class="col-md-6 logMenu borderOptions">
-						<form action="do" method="get" >
-							<div class="register-row">
+					<div class="logMenu borderOptions">
+						<form action="#" method="post" data-toggle="validator">
+							<div class="register-row form-group">
 								<label for="name">
-								<input type="text" name="nameLogin" id="name" placeholder="  Телефон або email" class="borderOptions marginOptions " required >
+									<input
+										type="text"
+										name="nameLogin"
+										id="name"
+										placeholder="Телефон або email"
+										class="borderOptions form-control"
+										required
+										data-required-error="Вкажіть логін"
+										pattern="^(\w+([\.\-]?\w+)*\@\w+([\.\-]?\w+)*\.[a-z]{2,3})|(\+\d{12})$"
+										data-pattern-error="Хибний формат логіна"
+									>
 								</label>
+								<div class="help-block with-errors"></div>
 							</div>
-							<div class="register-row">
+							<div class="register-row form-group">
 								<label for="pass">
-								<input type="password" name="pass" id="pass" placeholder="  Пароль" class="borderOptions marginOptions" required>
+									<input
+										type="password"
+										name="pass"
+										id="pass"
+										placeholder="Пароль"
+										class="borderOptions form-control"
+										required
+										data-required-error="Вкажіть пароль"
+										minlength="6"
+										data-minlength-error="Пароль має складатись мінімум з 6 символів"
+									>
 								</label>
+								<div class="help-block with-errors"></div>
 							</div>
 							<div>
-								<input type="submit" value="Увійти" name="signup" class="borderOptions marginOptions">
+								<input type="submit" value="Увійти" name="signup" class="borderOptions">
 								<a href="#">Забули пароль?</a>
 							</div>
-							
 						</form>
 					</div>
 
-					<div class="col-md-6 regMenu borderOptions">
-						<form action="do" method="get" >
+					<div class="regMenu borderOptions">
+						<form action="#" method="post" data-toggle="validator">
 							<p class="regMenuHeader">Вперше ВКонтакті?</p>
 							<p class="regMenuParagraph">Миттєва реєстрація</p>
-							<div class="register-row inputInfo">
+							<div class="register-row inputInfo form-group">
 								<label for="nameRegister">
-								<input type="text" name="name" id="nameRegister" placeholder="  Ваше ім'я" class="borderOptions marginOptions" required >
+									<input
+										type="text"
+										name="name"
+										id="nameRegister"
+										placeholder="Ваше ім'я"
+										class="borderOptions form-control"
+										required
+										data-required-error="Введіть своє ім'я"
+										pattern="^[a-zA-ZА-Яа-яЁё]+([ \-\']?[a-zA-ZА-Яа-яЁё]+)*$"
+										data-pattern-error="Хибний формат імені"
+									>
 								</label>
+								<div class="help-block with-errors"></div>
 							</div>
-							<div class="register-row ">
+							<div class="register-row form-group">
 								<label for="surname">
-								<input type="text" name="name" id="surname" placeholder="  Ваше прізвище" class="borderOptions marginOptions " required >
+									<input
+										type="text"
+										name="name"
+										id="surname"
+										placeholder="Ваше прізвище"
+										class="borderOptions form-control"
+										required
+										data-required-error="Введіть своє прізвище"
+										pattern="^[a-zA-ZА-Яа-яЁё]+([ \-\']?[a-zA-ZА-Яа-яЁё]+)*$"
+										data-pattern-error="Хибний формат прізвища"
+									>
 								</label>
+								<div class="help-block with-errors"></div>
 							</div>
-							<div class="birthUnswer">
+							<div class="birthTitle">
 								Дата народження
 								<a href="#">?</a>
 							</div>
-							<div class="birthDate marginOptions">
-								<div class="form-row col-md-3">
-									<select class="daysList borderOptions"></select>
-								</div>
-								<div class="form-row col-md-5">
-									<select class="monthList borderOptions"><option>November</option></select>
-								</div>
-								<div class="form-row col-md-2">
-									<select class="yearsList borderOptions"></select>
-								</div>
+							<div class="birthDate">
+								<select class="daysList borderOptions"></select>
+								<select class="monthList borderOptions"></select>
+								<select class="yearsList borderOptions"></select>
 							</div>
-							<button class="col-md-12 borderOptions regButton marginOptions">Зареєструватися</button>
+							<button class="borderOptions regButton">Зареєструватися</button>
 						</form>
 						
-						<div class="fbLink col-md-12">
+						<div class="fbLink">
 							<a href="#">Увійти через Facebook</a>
 						</div>
 					</div>
@@ -99,54 +138,37 @@
 			</div>
 
 			<div class="row">
-				<div class="footer">
-					
-					<div class="copyright col-md-2" style="background:red;">
+				<footer class="footer">
+					<div class="copyright col-md-2">
 						<a href="#">Вконтакті</a>
-						<small>&copy; 2016</small>
+						<small class="lightgrey">&copy; 2016</small>
 					</div>
 
-					<div class="aboutSiteBtns col-md-6" style="background:pink">
-						<ul class="verticalBtns">
-							<li>про компанію</li>
-							<li>правила</li>
-							<li>реклама</li>
-							<li>розробникам</li>
+					<div class="aboutSiteBtns col-md-6">
+						<ul class="aboutBtns">
+							<li><a href="#">про компанію</a></li>
+							<li><a href="#">правила</a></li>
+							<li><a href="#">реклама</a></li>
+							<li><a href="#">розробникам</a></li>
 						</ul>
 					</div>
 
-					<div class="footerLangs col-md-4" style="background:orange">
-						<ul class="verticalBtns">
-							<li>Мова:</li>
-							<li>English</li>
-							<li>Русский</li>
-							<li>Українська</li>
+					<div class="footerLangs col-md-4">
+						<ul class="langBtns">
+							<li class="lightgrey">Мова:</li>
+							<li><a>English</a></li>
+							<li><a>Русский</a></li>
+							<li><a>Українська</a></li>
 						</ul>
 					</div>
-				</div>
+				</footer>
 			</div>
 		</div>
-
-		
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			$(function(){
-			var $select = $(".daysList");
-				for (i=1;i<=31;i++){
-				$select.append($('<option></option>').val(i).html(i))
-				}
-			});
-
-			$(function(){
-			var $select = $(".yearsList");
-				for (i=2016;i>=1901;i--){
-				$select.append($('<option></option>').val(i).html(i))
-				}
-			});
-		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
