@@ -25,4 +25,6 @@ var $daysSelect = $('.daysList'),
 	$searchBox.find('input[type="search"]').on('blur', function () {
 		$searchBox.removeClass('focusStyle');
 	});
+
+	$('[data-toggle="popover"]').popover();
 });

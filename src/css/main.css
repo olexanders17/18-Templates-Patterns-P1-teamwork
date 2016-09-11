@@ -123,6 +123,9 @@ div.help-block {
 	margin-bottom: 10px;
 	color: darkgrey;
 }
+.popover-content {
+	color: #000;
+}
 .birthDate {
 	text-align: center;
 }
@@ -147,6 +150,11 @@ div.help-block {
 	border-top: 1px solid #e3e4e8;
 	padding: 10px 0;
 	text-align: center;
+}
+.fbLink a {
+	padding-left: 25px;
+	background: url(../images/facebook.png) no-repeat 0 0;
+	background-size: 15px auto;
 }
 
 /*=============FOOTER BLOCK ===============*/
