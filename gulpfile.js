@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var eslint = require('gulp-eslint');
 var jade = require('gulp-jade');
+var ghPages = require('gulp-gh-pages');
 
 
 gulp.task('copy', function () {
@@ -28,3 +29,10 @@ gulp.task('jade', function () {
         .pipe(gulp.dest('./dist/'))
 });
 
+
+gulp.task('deploy:gh-pages', function () {
+    return gulp.src("./src/**/*.*")
+        .pipe(ghPages({
+            message: '(deploy) ' + (new Date().toISOString())
+        }));
+});
