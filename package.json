@@ -16,6 +16,7 @@
   "homepage": "https://github.com/olexanders17/18-Templates-Patterns-teamwork-#readme",
   "devDependencies": {
     "bower": "^1.7.9",
+    "del": "^2.2.2",
     "eslint": "^3.4.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
