@@ -22,7 +22,7 @@ gulp.task('eslint', function () {
 gulp.task('jade', function () {
     var YOUR_LOCALS = {};
 
-    gulp.src('./src/*.jade')
+    gulp.src('./src/*.pug')
         .pipe(jade({
             locals: YOUR_LOCALS
         }))
